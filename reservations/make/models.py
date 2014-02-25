@@ -8,11 +8,17 @@ class Make(models.Model):
     email = models.EmailField()
     phone_number = models.IntField(max_length = 10)
     
+    def __unicode__(self):
+        return self.phone_number
+    
     
 class Details(models.Model):
     name = models.Charfield(max_length = 150)
-    available_spots = models.Intfield()
-    time_slots = models.Intfield()
+    available_spots = models.Intfield(max_length = 100)
+    time_slots = models.Intfield(max_length = 100)
     
-    #code
+    def __unicode__(self):
+        return self.name
+    
+    
 
