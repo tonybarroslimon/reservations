@@ -1,9 +1,9 @@
 from django.db import models
 
 class Make(models.Model):
-    first_name = models.Charfield(max_length = 150)
-    last_name = models.Charfield(max_length = 150)
-    special_requests = models.Charfield(max_length = 500)
+    first_name = models.CharField(max_length = 150)
+    last_name = models.CharField(max_length = 150)
+    special_requests = models.CharField(max_length = 500)
     reservation_date = models.DateTimeField()
     reservation_made = models.DateTimeField(default = datetime.datetime.now)
     email = models.CharField(max_length = 300)
