@@ -5,7 +5,7 @@ class Make(models.Model):
     last_name = models.CharField(max_length = 150)
     special_requests = models.CharField(max_length = 500)
     reservation_date = models.DateTimeField()
-    reservation_made = models.DateTimeField(default = datetime.datetime.now)
+    reservation_made = models.DateTimeField(auto_now_add = True)
     email = models.CharField(max_length = 300)
     phone_number = models.IntField(max_length = 10)
     
