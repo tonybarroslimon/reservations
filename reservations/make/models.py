@@ -1,11 +1,13 @@
 from django.db import models
 
+from datetime import datetime
+
 class Make(models.Model):
     first_name = models.CharField(max_length = 150)
     last_name = models.CharField(max_length = 150)
     special_requests = models.CharField(max_length = 500)
     reservation_date = models.DateTimeField()
-    reservation_made = models.DateTimeField(auto_now_add = True)
+    reservation_made = models.DateTimeField(default = datetime.now, blank = True)
     email = models.CharField(max_length = 300)
     phone_number = models.IntegerField(max_length = 10)
     
